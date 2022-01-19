@@ -97,6 +97,7 @@ require('packer').startup(function(use)
   --
   use { "wbthomason/packer.nvim" }
   use { "neovim/nvim-lspconfig" }
+  use { "jacoborus/tender.vim" }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
@@ -104,6 +105,9 @@ require('packer').startup(function(use)
     require('packer').sync()
   end
 end)
+
+-- colorscheme
+vim.cmd[[colorscheme tender]]
 
 -- Golang
 require("lspconfig").gopls.setup{}
