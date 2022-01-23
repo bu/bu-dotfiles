@@ -1,4 +1,7 @@
 
+# try to import some local machine environemnt
+source ~/.zsh_env_vars
+
 # show prompt to be directory and $
 PROMPT="
  %~ $ "
@@ -26,3 +29,5 @@ zstyle ':completion:*' group-name ''
 zstyle ':completion:::::' completer _expand _complete _ignored _approximate
 
 PATH=$PATH:~/go/bin
+
+alias actgh="act --actor bu --secret GITHUB_TOKEN=${GITHUB_TOKEN} --secret ACCESS_TOKEN=${GITHUB_TOKEN}"
