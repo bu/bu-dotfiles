@@ -1,0 +1,13 @@
+[user]
+	name = Buwei Chiu
+	email = bu@hax4.in
+[init]
+	defaultBranch = main
+[core]
+	editor = nvim
+	pager = cat
+[color]
+	ui = always
+	diff = auto
+	status = auto
+	branch = auto
