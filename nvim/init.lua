@@ -98,6 +98,8 @@ require('packer').startup(function(use)
   use { "wbthomason/packer.nvim" }
   use { "neovim/nvim-lspconfig" }
   use { "jacoborus/tender.vim" }
+  use { "neoclide/vim-jsx-improve" }
+  use { "editorconfig/editorconfig-vim" }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
@@ -108,6 +110,12 @@ end)
 
 -- colorscheme
 vim.cmd[[colorscheme tender]]
+
+-- no mouse
+vim.cmd[[set mouse=]]
+
+-- show all tabs
+vim.cmd[[set list]]
 
 -- Golang
 require("lspconfig").gopls.setup{}
@@ -145,3 +153,6 @@ end
 vim.cmd("autocmd BufWritePre *.go lua goimports(1000)")
 vim.cmd("autocmd BufWritePost * lua vim.lsp.buf.formatting()")
 vim.cmd("autocmd FileType go setlocal omnifunc=v:lua.vim.lsp.omnifunc")
+
+-- load 
+
