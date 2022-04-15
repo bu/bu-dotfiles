@@ -93,13 +93,9 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 require('packer').startup(function(use)
-  -- My plugins here
-  -- use 'foo1/bar1.nvim'
-  -- use 'foo2/bar2.nvim'
-  --
   use { "wbthomason/packer.nvim" }
   use { "neovim/nvim-lspconfig" }
-  use { "jacoborus/tender.vim" }
+  use { "NLKNguyen/papercolor-theme" }
   use { "neoclide/vim-jsx-improve" }
   use { "editorconfig/editorconfig-vim" }
 
@@ -111,7 +107,8 @@ require('packer').startup(function(use)
 end)
 
 -- colorscheme
-vim.cmd[[colorscheme tender]]
+vim.o.background = "light"
+vim.cmd[[colorscheme PaperColor]]
 
 -- no mouse
 vim.cmd[[set mouse=]]
