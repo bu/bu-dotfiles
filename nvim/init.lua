@@ -66,6 +66,8 @@ vim.g.loaded_tutor_mode_plugin= 1
 	key("n", "<S-Tab>", "v<", {})
 	key("v", "<s-tab>", "v<", {})
 
+	-- whitespace
+	vim.opt.listchars = { space = '·', tab = '» ', eol = '↵', nbsp = '␣', trail = '~' }
 
 -- NetRW --------------------
 	-- use previous split to open document
